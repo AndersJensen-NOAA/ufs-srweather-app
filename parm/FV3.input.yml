@@ -128,6 +128,29 @@ FV3_RAP:
     imfdeepcnv: 3
     imfshalcnv: 3
 
+FV3_HRRR_gf:
+  fv_core_nml:
+    <<: *HRRR_fv_core
+  gfs_physics_nml:
+    <<: *RRFS_v1beta_phys
+    cdmbgwd: [3.5, 1.0]
+    do_mynnsfclay: True
+    do_sfcperts: !!python/none
+    gwd_opt: 3
+    do_gsl_drag_ss: True
+    do_gsl_drag_tofd: True
+    do_gsl_drag_ls_bl: True
+    iaer: 5111
+    icliq_sw: 2
+    iovr: 3
+    lsm: 3
+    lsoil_lsm: 9
+    sfclay_compute_flux: False
+    do_deep: True
+    shal_cnv: True
+    imfdeepcnv: 3
+    imfshalcnv: 3
+
 FV3_GFS_2017_gfdlmp:
   atmos_model_nml:
     avg_max_length: 3600.0
